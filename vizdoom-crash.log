@@ -1,0 +1,581 @@
+*** Fatal Error ***
+Address not mapped to object (signal 11)
+Address: 0x7f6a90091f28
+
+System: Linux arz-s15 5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:13 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+
+Executing: gdb --quiet --batch --command=gdb-respfile-Mc13pj
+[New LWP 3119]
+[New LWP 3171]
+[New LWP 3173]
+[New LWP 3174]
+[New LWP 3175]
+[New LWP 3176]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f6a9bc9542f in __GI___wait4 (pid=3311, stat_loc=0x9253b4, options=0, usage=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+
+* Loaded Libraries
+From                To                  Syms Read   Shared Object Library
+0x00007f6a9d41c1d0  0x00007f6a9d4f1c72  Yes (*)     /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+0x00007f6a9d8ef040  0x00007f6a9d8ef105  Yes         /lib/x86_64-linux-gnu/libpthread.so.0
+0x00007f6a9d8ea080  0x00007f6a9d8ea275  Yes         /lib/x86_64-linux-gnu/librt.so.1
+0x00007f6a9d8cf280  0x00007f6a9d8dfc14  Yes (*)     /lib/x86_64-linux-gnu/libz.so.1
+0x00007f6a9d013880  0x00007f6a9d022667  Yes (*)     /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libboost_thread-473b539f.so.1.66.0
+0x00007f6a9cc01c50  0x00007f6a9cc02df8  Yes (*)     /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libboost_system-69a6c43e.so.1.66.0
+0x00007f6a9c808fe0  0x00007f6a9c80df92  Yes (*)     /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libboost_date_time-bfc31cd3.so.1.66.0
+0x00007f6a9c403960  0x00007f6a9c406700  Yes (*)     /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libboost_chrono-67089fad.so.1.66.0
+0x00007f6a9c000760  0x00007f6a9c0008b5  Yes (*)     /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libboost_atomic-fb1368c6.so.1.66.0
+0x00007f6a9d8c7040  0x00007f6a9d8c7105  Yes         /lib/x86_64-linux-gnu/libdl.so.2
+0x00007f6a9be76420  0x00007f6a9bf7efc2  Yes (*)     /lib/x86_64-linux-gnu/libstdc++.so.6
+0x00007f6a9d7eb3a0  0x00007f6a9d8668c8  Yes         /lib/x86_64-linux-gnu/libm.so.6
+0x00007f6a9d7c0660  0x00007f6a9d7d6805  Yes (*)     /lib/x86_64-linux-gnu/libgcc_s.so.1
+0x00007f6a9bbd3700  0x00007f6a9bd6593d  Yes         /lib/x86_64-linux-gnu/libc.so.6
+0x00007f6a9d8fc090  0x00007f6a9d925315  Yes         /lib64/ld-linux-x86-64.so.2
+0x00007f6a9d78fec0  0x00007f6a9d7a8680  Yes (*)     /lib/x86_64-linux-gnu/libudev.so.1
+0x00007f6a9d28e0c0  0x00007f6a9d3186ce  Yes (*)     /lib/x86_64-linux-gnu/libX11.so.6
+0x00007f6a9d764640  0x00007f6a9d777660  Yes (*)     /lib/x86_64-linux-gnu/libxcb.so.1
+0x00007f6a9d26f360  0x00007f6a9d270092  Yes (*)     /lib/x86_64-linux-gnu/libXau.so.6
+0x00007f6a9d2681a0  0x00007f6a9d269967  Yes (*)     /lib/x86_64-linux-gnu/libXdmcp.so.6
+0x00007f6a9d253040  0x00007f6a9d25e226  Yes (*)     /lib/x86_64-linux-gnu/libbsd.so.0
+0x00007f6a9d243160  0x00007f6a9d249739  Yes (*)     /lib/x86_64-linux-gnu/libmd.so.0
+0x00007f6a9cfef600  0x00007f6a9cff994e  Yes (*)     /lib/x86_64-linux-gnu/libXext.so.6
+0x00007f6a9cfe1660  0x00007f6a9cfe61fc  Yes (*)     /lib/x86_64-linux-gnu/libXcursor.so.1
+0x00007f6a9cfd4440  0x00007f6a9cfda7e2  Yes (*)     /lib/x86_64-linux-gnu/libXrender.so.1
+0x00007f6a9cfcc310  0x00007f6a9cfce961  Yes (*)     /lib/x86_64-linux-gnu/libXfixes.so.3
+0x00007f6a9cfc61b0  0x00007f6a9cfc6bd1  Yes (*)     /lib/x86_64-linux-gnu/libXinerama.so.1
+0x00007f6a9cfb4460  0x00007f6a9cfbf67b  Yes (*)     /lib/x86_64-linux-gnu/libXi.so.6
+0x00007f6a9cfa6360  0x00007f6a9cfacec9  Yes (*)     /lib/x86_64-linux-gnu/libXrandr.so.2
+0x00007f6a9cf9e240  0x00007f6a9cfa0a89  Yes (*)     /lib/x86_64-linux-gnu/libXxf86vm.so.1
+0x00007f6a9cbbc1c0  0x00007f6a9cbbef11  Yes (*)     /lib/x86_64-linux-gnu/libGL.so.1
+0x00007f6a9cb01240  0x00007f6a9cb03187  Yes (*)     /lib/x86_64-linux-gnu/libGLdispatch.so.0
+0x00007f6a9cf086c0  0x00007f6a9cf22080  Yes (*)     /lib/x86_64-linux-gnu/libGLX.so.0
+0x00007f6a9ca68e40  0x00007f6a9caa5262  Yes (*)     /lib/x86_64-linux-gnu/libGLX_mesa.so.0
+0x00007f6a9cedd100  0x00007f6a9ceea719  Yes (*)     /lib/x86_64-linux-gnu/libglapi.so.0
+0x00007f6a9ce37760  0x00007f6a9ce418ab  Yes (*)     /lib/x86_64-linux-gnu/libdrm.so.2
+0x00007f6a9ce200a0  0x00007f6a9ce28b29  Yes (*)     /lib/x86_64-linux-gnu/libxcb-glx.so.0
+0x00007f6a9cecc040  0x00007f6a9cecc11f  Yes (*)     /lib/x86_64-linux-gnu/libX11-xcb.so.1
+0x00007f6a9cec60a0  0x00007f6a9cec7309  Yes (*)     /lib/x86_64-linux-gnu/libxcb-dri2.so.0
+0x00007f6a9cec00e0  0x00007f6a9cec0c37  Yes (*)     /lib/x86_64-linux-gnu/libxcb-shm.so.0
+0x00007f6a9ca21290  0x00007f6a9ca3f657  Yes (*)     /lib/x86_64-linux-gnu/libexpat.so.1
+0x00007f6a9ce11180  0x00007f6a9ce11440  Yes (*)     /lib/x86_64-linux-gnu/libxshmfence.so.1
+0x00007f6a9c7f40c0  0x00007f6a9c7f90b7  Yes (*)     /lib/x86_64-linux-gnu/libxcb-randr.so.0
+0x00007f6a9ce0b0e0  0x00007f6a9ce0c137  Yes (*)     /lib/x86_64-linux-gnu/libxcb-dri3.so.0
+0x00007f6a9ca190a0  0x00007f6a9ca1997a  Yes (*)     /lib/x86_64-linux-gnu/libxcb-present.so.0
+0x00007f6a9c7e6100  0x00007f6a9c7e8416  Yes (*)     /lib/x86_64-linux-gnu/libxcb-sync.so.1
+0x00007f6a9c7dc0a0  0x00007f6a9c7de8de  Yes (*)     /lib/x86_64-linux-gnu/libxcb-xfixes.so.0
+0x00007f6a9912ff70  0x00007f6a9a429c12  Yes (*)     /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+0x00007f6a92deb540  0x00007f6a96056d52  Yes (*)     /lib/x86_64-linux-gnu/libLLVM-15.so.1
+0x00007f6a9c714220  0x00007f6a9c7c5f02  Yes (*)     /lib/x86_64-linux-gnu/libzstd.so.1
+0x00007f6a9c6fc5a0  0x00007f6a9c7028b3  Yes (*)     /lib/x86_64-linux-gnu/libsensors.so.5
+0x00007f6a9c6ed2a0  0x00007f6a9c6f3215  Yes (*)     /lib/x86_64-linux-gnu/libdrm_radeon.so.1
+0x00007f6a9c6d05a0  0x00007f6a9c6e331c  Yes (*)     /lib/x86_64-linux-gnu/libelf.so.1
+0x00007f6a9c6c4760  0x00007f6a9c6c8f72  Yes (*)     /lib/x86_64-linux-gnu/libdrm_amdgpu.so.1
+0x00007f6a9c6b8400  0x00007f6a9c6bc14a  Yes (*)     /lib/x86_64-linux-gnu/libdrm_nouveau.so.2
+0x00007f6a9c693620  0x00007f6a9c6a9293  Yes (*)     /lib/x86_64-linux-gnu/libdrm_intel.so.1
+0x00007f6a9c685460  0x00007f6a9c68b392  Yes (*)     /lib/x86_64-linux-gnu/libffi.so.8
+0x00007f6a9c651ff0  0x00007f6a9c66e6d0  Yes (*)     /lib/x86_64-linux-gnu/libedit.so.2
+0x00007f6a9c625780  0x00007f6a9c63519b  Yes (*)     /lib/x86_64-linux-gnu/libtinfo.so.6
+0x00007f6a9c24de30  0x00007f6a9c39f34b  Yes (*)     /lib/x86_64-linux-gnu/libxml2.so.2
+0x00007f6a9c2155a0  0x00007f6a9c2198e0  Yes (*)     /lib/x86_64-linux-gnu/libpciaccess.so.0
+0x00007f6a91f0d910  0x00007f6a91fffe31  Yes (*)     /lib/x86_64-linux-gnu/libicuuc.so.70
+0x00007f6a91e7f3c0  0x00007f6a91e990de  Yes (*)     /lib/x86_64-linux-gnu/liblzma.so.5
+0x00007f6a9025f050  0x00007f6a9025f1a1  Yes (*)     /lib/x86_64-linux-gnu/libicudata.so.70
+0x00007f6a901d8250  0x00007f6a9024f9b3  Yes (*)     /usr/lib/wsl/lib/libd3d12.so
+0x00007f6a90109fa0  0x00007f6a90184e81  Yes (*)     /usr/lib/wsl/lib/libdxcore.so
+0x00007f6a8ce3e010  0x00007f6a8ebdfd01  Yes (*)     /usr/lib/wsl/drivers/nvamig.inf_amd64_306c93e62d28e6e4/libnvwgf2umx.so
+(*): Shared library is missing debugging information.
+
+* Threads
+  Id   Target Id                                   Frame 
+* 1    Thread 0x7f6a9d7b8740 (LWP 3109) "vizdoom"  0x00007f6a9bc9542f in __GI___wait4 (pid=3311, stat_loc=0x9253b4, options=0, usage=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+  2    Thread 0x7f6a9bbaa640 (LWP 3119) "SDLTimer" __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0xe597a0) at ./nptl/futex-internal.c:57
+  3    Thread 0x7f6a8b7e9640 (LWP 3171) "vizdoom"  0x00007f6a9bcc3bcf in __GI___poll (fds=0x7f6a84000b70, nfds=1, timeout=10) at ../sysdeps/unix/sysv/linux/poll.c:29
+  4    Thread 0x7f6a8a970640 (LWP 3173) "vizdoom"  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4b8) at ./nptl/futex-internal.c:57
+  5    Thread 0x7f6a8a16f640 (LWP 3174) "vizdoom"  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4bc) at ./nptl/futex-internal.c:57
+  6    Thread 0x7f6a8996e640 (LWP 3175) "vizdoom"  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4b8) at ./nptl/futex-internal.c:57
+  7    Thread 0x7f6a8916d640 (LWP 3176) "vizdoom"  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4bc) at ./nptl/futex-internal.c:57
+
+* FPU Status
+  R7: Empty   0x00000000000000000000
+  R6: Empty   0x00000000000000000000
+  R5: Empty   0x00000000000000000000
+  R4: Empty   0x00000000000000000000
+  R3: Empty   0x00000000000000000000
+  R2: Empty   0x00000000000000000000
+  R1: Empty   0x00000000000000000000
+=>R0: Empty   0x00000000000000000000
+
+Status Word:         0x0000                                            
+                       TOP: 0
+Control Word:        0x037f   IM DM ZM OM UM PM
+                       PC: Extended Precision (64-bits)
+                       RC: Round to nearest
+Tag Word:            0xffff
+Instruction Pointer: 0x00:0x00000000
+Operand Pointer:     0x00:0x00000000
+Opcode:              0x0000
+
+* Registers
+rax            0xfffffffffffffe00  -512
+rbx            0xcef               3311
+rcx            0x7f6a9bc9542f      140095856923695
+rdx            0x0                 0
+rsi            0x9253b4            9589684
+rdi            0xcef               3311
+rbp            0xb                 0xb
+rsp            0x925380            0x925380
+r8             0x0                 0
+r9             0x0                 0
+r10            0x0                 0
+r11            0x293               659
+r12            0x9253b4            9589684
+r13            0x9228a0            9578656
+r14            0x3e                62
+r15            0x1090              4240
+rip            0x7f6a9bc9542f      0x7f6a9bc9542f <__GI___wait4+95>
+eflags         0x293               [ CF AF SF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+
+* Backtrace
+
+Thread 7 (Thread 0x7f6a8916d640 (LWP 3176) "vizdoom"):
+#0  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4bc) at ./nptl/futex-internal.c:57
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+        resultvar = <optimized out>
+        __arg6 = <optimized out>
+        __arg5 = <optimized out>
+        __arg4 = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a6 = <optimized out>
+        _a5 = <optimized out>
+        _a4 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x15fd4bc) at ./nptl/futex-internal.c:87
+        err = <optimized out>
+        clockbit = 256
+        op = 393
+        err = <optimized out>
+        clockbit = <optimized out>
+        op = <optimized out>
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x15fd4bc, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+No locals.
+#3  0x00007f6a9bc3ea41 in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x13cb230, cond=0x15fd490) at ./nptl/pthread_cond_wait.c:503
+        spin = 0
+        buffer = {__routine = 0x7f6a9bc3e720 <__condvar_cleanup_waiting>, __arg = 0x7f6a8916cd60, __canceltype = 0, __prev = 0x0}
+        cbuffer = {wseq = 15, cond = 0x15fd490, mutex = 0x13cb230, private = 0}
+        err = <optimized out>
+        g = 1
+        flags = <optimized out>
+        g1_start = <optimized out>
+        maxspin = 0
+        signals = <optimized out>
+        result = 0
+        wseq = 15
+        seq = 7
+        private = 0
+        maxspin = <optimized out>
+        err = <optimized out>
+        result = <optimized out>
+        wseq = <optimized out>
+        g = <optimized out>
+        seq = <optimized out>
+        flags = <optimized out>
+        private = <optimized out>
+        signals = <optimized out>
+        done = <optimized out>
+        g1_start = <optimized out>
+        spin = <optimized out>
+        buffer = <optimized out>
+        cbuffer = <optimized out>
+        s = <optimized out>
+#4  ___pthread_cond_wait (cond=0x15fd490, mutex=0x13cb230) at ./nptl/pthread_cond_wait.c:627
+No locals.
+#5  0x00007f6a8fce374f in ?? ()
+No symbol table info available.
+#6  0x0000000000000002 in ?? ()
+No symbol table info available.
+#7  0x00007f6a9002e62b in ?? ()
+No symbol table info available.
+#8  0x00000000013cb230 in ?? ()
+No symbol table info available.
+#9  0x0000000000000001 in ?? ()
+No symbol table info available.
+#10 0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 6 (Thread 0x7f6a8996e640 (LWP 3175) "vizdoom"):
+#0  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4b8) at ./nptl/futex-internal.c:57
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+        resultvar = <optimized out>
+        __arg6 = <optimized out>
+        __arg5 = <optimized out>
+        __arg4 = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a6 = <optimized out>
+        _a5 = <optimized out>
+        _a4 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x15fd4b8) at ./nptl/futex-internal.c:87
+        err = <optimized out>
+        clockbit = 256
+        op = 393
+        err = <optimized out>
+        clockbit = <optimized out>
+        op = <optimized out>
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x15fd4b8, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+No locals.
+#3  0x00007f6a9bc3ea41 in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x13cb230, cond=0x15fd490) at ./nptl/pthread_cond_wait.c:503
+        spin = 0
+        buffer = {__routine = 0x7f6a9bc3e720 <__condvar_cleanup_waiting>, __arg = 0x7f6a8996dd60, __canceltype = -1, __prev = 0x0}
+        cbuffer = {wseq = 16, cond = 0x15fd490, mutex = 0x13cb230, private = 0}
+        err = <optimized out>
+        g = 0
+        flags = <optimized out>
+        g1_start = <optimized out>
+        maxspin = 0
+        signals = <optimized out>
+        result = 0
+        wseq = 16
+        seq = 8
+        private = 0
+        maxspin = <optimized out>
+        err = <optimized out>
+        result = <optimized out>
+        wseq = <optimized out>
+        g = <optimized out>
+        seq = <optimized out>
+        flags = <optimized out>
+        private = <optimized out>
+        signals = <optimized out>
+        done = <optimized out>
+        g1_start = <optimized out>
+        spin = <optimized out>
+        buffer = <optimized out>
+        cbuffer = <optimized out>
+        s = <optimized out>
+#4  ___pthread_cond_wait (cond=0x15fd490, mutex=0x13cb230) at ./nptl/pthread_cond_wait.c:627
+No locals.
+#5  0x00007f6a8fce374f in ?? ()
+No symbol table info available.
+#6  0x000000000140f200 in ?? ()
+No symbol table info available.
+#7  0x00007f6a9002e62b in ?? ()
+No symbol table info available.
+#8  0x00000000013cb230 in ?? ()
+No symbol table info available.
+#9  0x0000000000000001 in ?? ()
+No symbol table info available.
+#10 0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 5 (Thread 0x7f6a8a16f640 (LWP 3174) "vizdoom"):
+#0  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4bc) at ./nptl/futex-internal.c:57
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+        resultvar = <optimized out>
+        __arg6 = <optimized out>
+        __arg5 = <optimized out>
+        __arg4 = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a6 = <optimized out>
+        _a5 = <optimized out>
+        _a4 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x15fd4bc) at ./nptl/futex-internal.c:87
+        err = <optimized out>
+        clockbit = 256
+        op = 393
+        err = <optimized out>
+        clockbit = <optimized out>
+        op = <optimized out>
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x15fd4bc, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+No locals.
+#3  0x00007f6a9bc3ea41 in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x13cb230, cond=0x15fd490) at ./nptl/pthread_cond_wait.c:503
+        spin = 0
+        buffer = {__routine = 0x7f6a9bc3e720 <__condvar_cleanup_waiting>, __arg = 0x7f6a8a16ed60, __canceltype = 0, __prev = 0x0}
+        cbuffer = {wseq = 11, cond = 0x15fd490, mutex = 0x13cb230, private = 0}
+        err = <optimized out>
+        g = 1
+        flags = <optimized out>
+        g1_start = <optimized out>
+        maxspin = 0
+        signals = <optimized out>
+        result = 0
+        wseq = 11
+        seq = 5
+        private = 0
+        maxspin = <optimized out>
+        err = <optimized out>
+        result = <optimized out>
+        wseq = <optimized out>
+        g = <optimized out>
+        seq = <optimized out>
+        flags = <optimized out>
+        private = <optimized out>
+        signals = <optimized out>
+        done = <optimized out>
+        g1_start = <optimized out>
+        spin = <optimized out>
+        buffer = <optimized out>
+        cbuffer = <optimized out>
+        s = <optimized out>
+#4  ___pthread_cond_wait (cond=0x15fd490, mutex=0x13cb230) at ./nptl/pthread_cond_wait.c:627
+No locals.
+#5  0x00007f6a8fce374f in ?? ()
+No symbol table info available.
+#6  0x0000000000000003 in ?? ()
+No symbol table info available.
+#7  0x00007f6a9002e62b in ?? ()
+No symbol table info available.
+#8  0x00000000013cb230 in ?? ()
+No symbol table info available.
+#9  0x0000000000000001 in ?? ()
+No symbol table info available.
+#10 0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 4 (Thread 0x7f6a8a970640 (LWP 3173) "vizdoom"):
+#0  __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x15fd4b8) at ./nptl/futex-internal.c:57
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+        resultvar = <optimized out>
+        __arg6 = <optimized out>
+        __arg5 = <optimized out>
+        __arg4 = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a6 = <optimized out>
+        _a5 = <optimized out>
+        _a4 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x15fd4b8) at ./nptl/futex-internal.c:87
+        err = <optimized out>
+        clockbit = 256
+        op = 393
+        err = <optimized out>
+        clockbit = <optimized out>
+        op = <optimized out>
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x15fd4b8, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+No locals.
+#3  0x00007f6a9bc3ea41 in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x13cb230, cond=0x15fd490) at ./nptl/pthread_cond_wait.c:503
+        spin = 0
+        buffer = {__routine = 0x7f6a9bc3e720 <__condvar_cleanup_waiting>, __arg = 0x7f6a8a96fd60, __canceltype = -1, __prev = 0x0}
+        cbuffer = {wseq = 18, cond = 0x15fd490, mutex = 0x13cb230, private = 0}
+        err = <optimized out>
+        g = 0
+        flags = <optimized out>
+        g1_start = <optimized out>
+        maxspin = 0
+        signals = <optimized out>
+        result = 0
+        wseq = 18
+        seq = 9
+        private = 0
+        maxspin = <optimized out>
+        err = <optimized out>
+        result = <optimized out>
+        wseq = <optimized out>
+        g = <optimized out>
+        seq = <optimized out>
+        flags = <optimized out>
+        private = <optimized out>
+        signals = <optimized out>
+        done = <optimized out>
+        g1_start = <optimized out>
+        spin = <optimized out>
+        buffer = <optimized out>
+        cbuffer = <optimized out>
+        s = <optimized out>
+#4  ___pthread_cond_wait (cond=0x15fd490, mutex=0x13cb230) at ./nptl/pthread_cond_wait.c:627
+No locals.
+#5  0x00007f6a8fce374f in ?? ()
+No symbol table info available.
+#6  0x00007f6a7401ad00 in ?? ()
+No symbol table info available.
+#7  0x00007f6a9002e62b in ?? ()
+No symbol table info available.
+#8  0x00000000013cb230 in ?? ()
+No symbol table info available.
+#9  0x0000000000000001 in ?? ()
+No symbol table info available.
+#10 0x0000000000000000 in ?? ()
+No symbol table info available.
+
+Thread 3 (Thread 0x7f6a8b7e9640 (LWP 3171) "vizdoom"):
+#0  0x00007f6a9bcc3bcf in __GI___poll (fds=0x7f6a84000b70, nfds=1, timeout=10) at ../sysdeps/unix/sysv/linux/poll.c:29
+        sc_ret = -516
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+#1  0x00007f6a8cfb594e in ?? () from /usr/lib/wsl/drivers/nvamig.inf_amd64_306c93e62d28e6e4/libnvwgf2umx.so
+No symbol table info available.
+#2  0x00007f6a8cfb5b86 in ?? () from /usr/lib/wsl/drivers/nvamig.inf_amd64_306c93e62d28e6e4/libnvwgf2umx.so
+No symbol table info available.
+#3  0x00007f6a8e14a101 in ?? () from /usr/lib/wsl/drivers/nvamig.inf_amd64_306c93e62d28e6e4/libnvwgf2umx.so
+No symbol table info available.
+#4  0x00007f6a8e149e56 in ?? () from /usr/lib/wsl/drivers/nvamig.inf_amd64_306c93e62d28e6e4/libnvwgf2umx.so
+No symbol table info available.
+#5  0x00007f6a9bc3fac3 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
+        ret = <optimized out>
+        pd = <optimized out>
+        out = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140725389956832, -970937849753813132, 140095583589952, 10, 140095856572368, 140725389957184, 888229294649720692, 888263199880855412}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+#6  0x00007f6a9bcd1850 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+No locals.
+
+Thread 2 (Thread 0x7f6a9bbaa640 (LWP 3119) "SDLTimer"):
+#0  __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0xe597a0) at ./nptl/futex-internal.c:57
+        sc_cancel_oldtype = 1
+        sc_ret = <optimized out>
+        resultvar = <optimized out>
+        __arg6 = <optimized out>
+        __arg5 = <optimized out>
+        __arg4 = <optimized out>
+        __arg3 = <optimized out>
+        __arg2 = <optimized out>
+        __arg1 = <optimized out>
+        _a6 = <optimized out>
+        _a5 = <optimized out>
+        _a4 = <optimized out>
+        _a3 = <optimized out>
+        _a2 = <optimized out>
+        _a1 = <optimized out>
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0xe597a0) at ./nptl/futex-internal.c:87
+        err = <optimized out>
+        clockbit = 256
+        op = 393
+        err = <optimized out>
+        clockbit = <optimized out>
+        op = <optimized out>
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0xe597a0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+No locals.
+#3  0x00007f6a9bc47bdf in do_futex_wait (sem=sem@entry=0xe597a0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+        err = <optimized out>
+#4  0x00007f6a9bc47c78 in __new_sem_wait_slow64 (sem=0xe597a0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:183
+        _buffer = {__routine = 0x7f6a9bc47bb0 <__sem_wait_cleanup>, __arg = 0xe597a0, __canceltype = 0, __prev = 0x0}
+        err = <optimized out>
+        d = 0
+#5  0x00007f6a9d4e9f22 in SDL_SemWait_REAL () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#6  0x00007f6a9d4ea065 in SDL_SemWaitTimeout_REAL () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#7  0x00007f6a9d46ee4a in SDL_TimerThread () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#8  0x00007f6a9d46e8c0 in SDL_RunThread () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#9  0x00007f6a9d4e9bed in RunThread () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#10 0x00007f6a9bc3fac3 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
+        ret = <optimized out>
+        pd = <optimized out>
+        out = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140725389973216, -970937849753813132, 140095855961664, 2, 140095856572368, 140725389973568, 888262863577235316, 888263199880855412}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+#11 0x00007f6a9bcd1850 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+No locals.
+
+Thread 1 (Thread 0x7f6a9d7b8740 (LWP 3109) "vizdoom"):
+#0  0x00007f6a9bc9542f in __GI___wait4 (pid=3311, stat_loc=0x9253b4, options=0, usage=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+        sc_ret = -512
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+#1  0x000000000043197c in ?? ()
+No symbol table info available.
+#2  <signal handler called>
+No locals.
+#3  0x00007f6a99c9135e in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#4  0x00007f6a99c4dd74 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#5  0x00007f6a99700169 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#6  0x00007f6a991fd217 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#7  0x00007f6a993327c2 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#8  0x00007f6a9921421b in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#9  0x00007f6a9914ffd0 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#10 0x00007f6a99153a32 in ?? () from /usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+No symbol table info available.
+#11 0x00007f6a9ca82993 in ?? () from /lib/x86_64-linux-gnu/libGLX_mesa.so.0
+No symbol table info available.
+#12 0x00007f6a9cf1b641 in ?? () from /lib/x86_64-linux-gnu/libGLX.so.0
+No symbol table info available.
+#13 0x00007f6a9cf20126 in ?? () from /lib/x86_64-linux-gnu/libGLX.so.0
+No symbol table info available.
+#14 0x00007f6a9d4d830e in X11_GL_MakeCurrent () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#15 0x00007f6a9d4aa453 in SDL_GL_MakeCurrent_REAL () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#16 0x00007f6a9d4aa551 in SDL_GL_DeleteContext_REAL.part.14 () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#17 0x00007f6a9d450bb4 in GL_DestroyRenderer () from /mnt/d/Development/doom-drl-agent/.conda/lib/python3.11/site-packages/vizdoom/../vizdoom.libs/libSDL2-2-d214786e.0.so.0.10.0
+No symbol table info available.
+#18 0x0000000000436a7e in ?? ()
+No symbol table info available.
+#19 0x0000000000436ab9 in ?? ()
+No symbol table info available.
+#20 0x0000000000432194 in ?? ()
+No symbol table info available.
+#21 0x0000000000435746 in ?? ()
+No symbol table info available.
+#22 0x00007f6a9bbf0495 in __run_exit_handlers (status=0, listp=0x7f6a9bdc5838 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:113
+        atfct = <optimized out>
+        onfct = <optimized out>
+        cxafct = <optimized out>
+        arg = 0x0
+        f = <optimized out>
+        new_exitfn_called = <optimized out>
+        cur = 0xd7a7c0
+#23 0x00007f6a9bbf0610 in __GI_exit (status=<optimized out>) at ./stdlib/exit.c:143
+No locals.
+#24 0x0000000000432f22 in ?? ()
+No symbol table info available.
+#25 0x0000000000433438 in ?? ()
+No symbol table info available.
+#26 0x000000000046cf05 in ?? ()
+No symbol table info available.
+#27 0x000000000046e327 in ?? ()
+No symbol table info available.
+#28 0x0000000000465d1f in ?? ()
+No symbol table info available.
+#29 0x0000000000468622 in ?? ()
+No symbol table info available.
+#30 0x000000000041c5fc in ?? ()
+No symbol table info available.
+#31 0x00007f6a9bbd4d90 in __libc_start_call_main (main=main@entry=0x41c3c0, argc=argc@entry=40, argv=argv@entry=0x7ffd2ee16df8) at ../sysdeps/nptl/libc_start_call_main.h:58
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -970937849759056012, 140725389979128, 4309952, 0, 140095886934080, 971885719608967028, 888262810465288052}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x7ffd2ee16df8, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 786525688}}}
+        not_first_call = <optimized out>
+#32 0x00007f6a9bbd4e40 in __libc_start_main_impl (main=0x41c3c0, argc=40, argv=0x7ffd2ee16df8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffd2ee16de8) at ../csu/libc-start.c:392
+No locals.
+#33 0x0000000000430c8e in ?? ()
+No symbol table info available.
+[Inferior 1 (process 3109) detached]
